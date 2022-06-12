@@ -13,16 +13,16 @@ RegisterServerEvent('elite-chopshop:server:ChopShop', function()
         
         Player.Functions.AddItem(item, amount)
         TriggerClientEvent("qb-inventory:client:ItemBox", src, QBCore.Shared.Items[item], "add")
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'Откри нещо интересно!'})
+        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Чичо Гошо: Получи интересни работи!!'})
     elseif chance >= 85 then 
         local item = Config.RareItems[math.random(1, #Config.RareItems)]
         local amount = 2
         
         Player.Functions.AddItem(item, amount)
         TriggerClientEvent("qb-inventory:client:ItemBox", src, QBCore.Shared.Items[item], "add")
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'Откри нещо интересно!'})
+        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Чичо Гошо: Получи интересни работи!'})
     else
-        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'Не ти даде нищо!'})
+        TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = 'Чичо Гошо: Не получи никакви неща!'})
     end 
 end)
 

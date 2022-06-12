@@ -21,9 +21,15 @@ Config.PedList = {
 		gender = 'male'
 	},
 
-	
+	{
+		model = `csb_agent`, 
+		coords = vector4(2409.86, 3031.27, 48.15, 350.01), 
+		gender = 'male'
+	},
 
 }
+
+
 
 Config.CommonItems = {
     'iron',

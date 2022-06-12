@@ -26,22 +26,20 @@ CreateThread(function()
         distance = 2.5
     })
 
-    exports['qb-target']:AddBoxZone("chopshop", vector3(2407.82, 3031.34, 48.15), 10, 10,  {
-      name = "chopshop",
-      heading = 0,
-      debugPoly = false,
-    }, {
+    exports['qb-target']:AddTargetModel('csb_agent', {
       options = {
         {
           type = "client",
           event = "elite-chopshop:client:ChopShop",
-          icon = 'fas fa-car',
-          label = 'Дай за скрап',
+          icon = 'fas fa-mask',
+          label = 'Чичо Гошо',
           item = 'key_scrapyard',
         }
       },
-      distance = 5,
-    })
+      distance = 2.5
+  })
+
+    
 
     exports['qb-target']:AddTargetModel(Config.Objects, {
       options = {

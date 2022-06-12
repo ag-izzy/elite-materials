@@ -25,7 +25,7 @@ RegisterNetEvent('elite-chopshop:client:ChopShop')
 AddEventHandler("elite-chopshop:client:ChopShop", function()
     local playerPed = PlayerPedId()
     if IsPedInAnyVehicle(playerPed, false) then
-        --exports['qb-dispatch']:chopshop(chopshop)
+        exports['qb-dispatch']:chopshop(chopshop)
     QBCore.Functions.Progressbar("ChopShop", "Разфасоване на МПС..", 25000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -39,15 +39,15 @@ AddEventHandler("elite-chopshop:client:ChopShop", function()
         DeleteVehicle(veh)
         DeleteEntity(veh)
         TriggerServerEvent("elite-chopshop:server:ChopShop")
-        exports['mythic_notify']:DoLongHudText('inform', 'Разглоби автомобила успешно!')
+        exports['mythic_notify']:DoLongHudText('inform', 'Чичак: Автомобилът е готов!')
 
 
     else
-        exports['mythic_notify']:DoLongHudText('error', 'Не успя да го разглобиш!')
+        exports['mythic_notify']:DoLongHudText('error', 'Чичак: Не успя да го разглобиш!')
         end
     end)
     else
-        exports['mythic_notify']:DoLongHudText('error', 'Къде е автомобила?!')
+        exports['mythic_notify']:DoLongHudText('error', 'Чичак: Нямаш автомобил... какво искаш да разглабям?!')
     end
 
     
